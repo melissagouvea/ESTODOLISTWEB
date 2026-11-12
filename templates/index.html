@@ -8,14 +8,15 @@
         {% for tarefa in tarefas %}
         <li class="bg-white rounded-xl shadow p-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div class="space-y-2 sm:flex-1">
-                <span class="block font-medium">{{}}</span>
+                <span class="block font-medium">{{ tarefa.nome_tarefa }}</span>
+                <span></span>
 
             </div>
             
             
             
             
-            {{ tarefa.nome_tarefa }}</li>
+           </li>
         {# lista vazia aqui #}
         {% endfor %}
     </ul>
