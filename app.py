@@ -14,6 +14,7 @@ def index():
         return redirect("/login")
 
     #usuário logado
+    tarefas = consultar_tarefas
     return render_template("index.html")
 
 #rota login
