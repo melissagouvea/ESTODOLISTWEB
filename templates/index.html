@@ -71,15 +71,13 @@
                     Editar
                  </a>
             <!-- botão de excluír tarefa -->
-             
-                <!-- botão de editar tarefa -->
-                 <a href="{{url_for('editar_tarefa', id=tarefa.id)}}"
+                 <a href="{{url_for('excluir_tarefa', id=tarefa.id)}}"
                  class="px-3 py-2 rounded-lg bg-blue-100 text-blue-700 hover:bg-blue-200 transition">
                     Editar
                  </a>
              </div>
         </li>
-        
+
         {# lista vazia aqui #}
         {% endfor %}
     </ul>
