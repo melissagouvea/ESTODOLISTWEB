@@ -15,11 +15,13 @@
                     <span class="px-2 py-1 rounded-full bg-slate-100 text-slate-700">
                          {{ tarefa.categoria }} 
                     </span>
-                    <span class=" text-slate-500"></span>
+                    <span class=" text-slate-500">
+                         {{ tarefa.data_prazo.strftime( "%d/%m/%Y" )}}
+                    </span>
                 </div>
                 
                 
-                </span>
+                
             </div>
            {# botões aqui #}
            </li>
