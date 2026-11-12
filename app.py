@@ -14,8 +14,8 @@ def index():
         return redirect("/login")
 
     #usuário logado
-    tarefas = consultar_tarefas
-    return render_template("index.html")
+    tarefas = consultar_tarefas()
+    return render_template("index.html", tarefas = tarefas)
 
 #rota login
 @app.route("/login", methods=["GET","POST"])
