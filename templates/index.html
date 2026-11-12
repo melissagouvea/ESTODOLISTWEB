@@ -8,8 +8,9 @@
         {% for tarefa in tarefas %}
         <li class="bg-white rounded-xl shadow p-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div class="space-y-2 sm:flex-1">
-                {#  #}
+                {# trocaremos o span em breve #}
                 <span class="block font-medium">{{ tarefa.nome_tarefa }}</span>
+                {# descrição aqui #}
                 <span class="block text-sm text-slate-500">
                     {{ tarefa.categoria }} · {{ tarefa.data_prazo.strftime( "%d/%m/%Y" )}}
                 </span>
