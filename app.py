@@ -4,8 +4,8 @@ app = Flask(__name__)
 app.secret_key = "senai" #exigencia para toda vez que se cria a sessão
 
 
-ADM_EMAIL = "melissa.gouvea.senai@gmail.com"
-ADM_SENHA = "123456"
+ADM_EMAIL = "123@gmail.com"
+ADM_SENHA = "123"
 
 @app.route("/") # Home page / Pagina inicial
 def index():
