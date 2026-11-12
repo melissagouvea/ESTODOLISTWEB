@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, session, redirect
+from database import consultar_tarefas
 
 app = Flask(__name__)
 app.secret_key = "senai" #exigencia para toda vez que se cria a sessão
