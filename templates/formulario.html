@@ -39,7 +39,18 @@
     value="{{ dados.data_prazo }}" required
     class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-400">
 
-{# prioridade aqui #}
+<label for="prioridade" class="block font-medium">Prioridade</label>
+<select id="prioridade" name="prioridade" required
+    class="w-full border rounded-lg p-3 bg-white">
+    <option value="ALTA"
+        {% if dados.prioridade == "ALTA" %}selected{% endif %}>Alta</option>
+    <option value="MEDIA"
+        {% if dados.prioridade == "MEDIA" %}selected{% endif %}>Média</option>
+    <option value="BAIXA"
+        {% if dados.prioridade == "BAIXA" %}selected{% endif %}>Baixa</option>
+</select>
+
+{# botões aqui #}
 
         </form>
     </main>
