@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, redirect, flash
-from database import consultar_tarefas
+from database import consultar_tarefas, inserir_tarefa
 
 app = Flask(__name__)
 app.secret_key = "senai" #exigencia para toda vez que se cria a sessão
@@ -58,7 +58,21 @@ def adicionar():
     if request.method == "GET":
         return render_template("formulario.html",categorias=CATEGORIAS,dados={}, erros=[])
     
-    #LER O POST AQ
+    #POST: LER O QUE VEIO DO FORMULÁRIO
+    nome_tarefa = request.form.get("nome_tarefa","").strip()
+    descricao = request.form.get("descricao","").strip()
+    categoria = request.form.get("categoria","").strip()
+    data_prazo = request.form.get("data_prazo","")
+    prioridade = request.form.get("prioridade","")
+
+    #validar os campos aqui
+
+    if inserir_tarefa(nome_tarefa, descricao, categoria, data_prazo, prioridade):
+        flash("Tarefa adicionada com sucesso!")
+    else:
+        flash("Não foi possível salvar. Confira a conexão com o banco.")
+    return redirect("/")
+
 #-------------------------------------------------------------------------------------------------------------------------------
 
 if __name__ == "__main__": #evita que a pessoa abra o app por outra rota sem ser o host
