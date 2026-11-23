@@ -9,6 +9,10 @@ ADM_EMAIL = "123@gmail.com"
 ADM_SENHA = "123"
 CATEGORIAS = ["Escola","Trabalho","Projetos","Pessoal","Saúde","Outros"]
 
+
+
+#---------------------------------------------------------------------------------------------------------------
+
 @app.route("/") # Home page / Pagina inicial
 def index():
     if "login" not in session:
