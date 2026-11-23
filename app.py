@@ -9,6 +9,7 @@ ADM_EMAIL = "123@gmail.com"
 ADM_SENHA = "123"
 CATEGORIAS = ["Escola","Trabalho","Projetos","Pessoal","Saúde","Outros"]
 
+#---------------------------------------------------------------------------------------------------------------
 def validar_tarefa(nome, descricao, categoria, prazo, prioridade):
     erros = []
     if len(nome) < 5 or len(nome) > 30 or nome.isdigit():
