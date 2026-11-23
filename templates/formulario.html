@@ -34,7 +34,12 @@
     {% endfor %}
 </select>
 
-{# prazo aqui #}
+<label for="data_prazo" class="block font-medium">Prazo</label>
+<input type="date" id="data_prazo" name="data_prazo"
+    value="{{ dados.data_prazo }}" required
+    class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-400">
+
+{# prioridade aqui #}
 
         </form>
     </main>
