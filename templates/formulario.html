@@ -23,7 +23,18 @@
     class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-indigo-400"
 >{{ dados.descricao or "" }}</textarea>
 
-{# categoria aqui #}
+<label for="categoria" class="block font-medium">Categoria</label>
+<select id="categoria" name="categoria" required
+    class="w-full border rounded-lg p-3 bg-white">
+    {% for c in categorias %}
+        <option value="{{ c }}"
+            {% if dados.categoria == c %}selected{% endif %}>
+            {{ c }}
+        </option>
+    {% endfor %}
+</select>
+
+{# prazo aqui #}
 
         </form>
     </main>
