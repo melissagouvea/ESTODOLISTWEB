@@ -1,3 +1,4 @@
+from datetime import date 
 from flask import Flask, render_template, request, session, redirect, flash
 from database import consultar_tarefas, inserir_tarefa
 
@@ -20,7 +21,14 @@ def validar_tarefa(nome, descricao, categoria, prazo, prioridade):
         erros.append("Categoria: de 5 a 30 caracteres, não só números.")
     if prioridade not in ("ALTA", "MEDIA", "BAIXA"):
         erros.append("Prioridade inválida.")
-    # validar o prazo aqui
+    try:
+        data = date.fromisoformat(prazo)
+        if data < date.today():
+            erros.append("Prazo: a data não pode ser no passado")
+    except ValueError:
+         erros.append("Prazo: informe uma data válida")
+    return erros 
+
 
 #---------------------------------------------------------------------------------------------------------------
 
