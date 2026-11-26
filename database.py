@@ -186,3 +186,7 @@ def buscar_tarefa(idtarefa):
         return cursor.fetchone() #Um dicionário, ou None se não existir
     except Error as erro:
         print(f"ERRO!Falha ao buscar a tarefa: {erro}")
+        return None
+    finally:
+        cursor.close()
+        conexao.close()
