@@ -278,6 +278,8 @@ def concluir(idtarefa):
         flash("Não foi possível concluír a tarefa.")
     return redirect("/")
 
+#passo 7: a rota excluir entra aqui
+
 
 # ---------------------------------------------------------
 # EXECUÇÃO DA APLICAÇÃO
