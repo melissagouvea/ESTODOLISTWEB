@@ -90,7 +90,6 @@ def adicionar():
 
     erros = validar_tarefa(nome_tarefa, descricao, categoria,
                        data_prazo, prioridade)
-
     if erros:
         return render_template("formulario.html", categorias=CATEGORIAS,
                            dados=request.form, erros=erros)
