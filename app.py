@@ -76,7 +76,7 @@ def not_found(erro):
 
 #-------------------------------------------------------------------------------------------------------------------------------
 #rota que mostra o formulário
-@app.route("/adicionar",methods=["GET",'POST'])
+@app.route("/adicionar",methods=["GET",'POST']) #cria o endereço da página para adicionar tarefas.
 def adicionar():
     if request.method == "GET":
         return render_template("formulario.html",categorias=CATEGORIAS,dados={}, erros=[])
