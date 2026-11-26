@@ -88,7 +88,12 @@ def adicionar():
     data_prazo = request.form.get("data_prazo","")
     prioridade = request.form.get("prioridade","")
 
-    #validar os campos aqui
+    erros = validar_tarefa(nome_tarefa, descricao, categoria,
+                       data_prazo, prioridade)
+
+if erros:
+    return render_template("formulario.html", categorias=CATEGORIAS,
+                           dados=request.form, erros=erros)
 
     if inserir_tarefa(nome_tarefa, descricao, categoria, data_prazo, prioridade):
         flash("Tarefa adicionada com sucesso!")
