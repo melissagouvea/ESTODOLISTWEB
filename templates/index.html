@@ -54,7 +54,7 @@
         </div>
         <div class="flex gap-2">
           {% if tarefa.status != "Concluída" %}
-          <form action="/concluir/{{tarefa.idtarefa}}"
+          <form action="/concluir/{{tarefa.idtarefa}}" method="post"
         </div>
       </li>
       {% else %}
