@@ -267,7 +267,7 @@ def adicionar():
     # Após tentar salvar, redireciona o usuário para a página inicial.
     return redirect("/")
 
-@app.route("/concluir/<int:idtarefa>")
+@app.route("/concluir/<int:idtarefa>",)
 
 
 # ---------------------------------------------------------
