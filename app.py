@@ -268,6 +268,7 @@ def adicionar():
     return redirect("/")
 
 @app.route("/concluir/<int:idtarefa>", methods=["POST"])
+def concluir(idtarefa):
 
 
 # ---------------------------------------------------------
