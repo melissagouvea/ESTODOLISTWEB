@@ -285,7 +285,10 @@ def excluir(idtarefa):
         flash("Tarefa não encontrada.")
         return redirect("/")
     if request.method == "GET":
-        return render_template
+        return render_template("confirmar_exclusao.html", tarefa=tarefa)
+    apagar_tarefa(idtarefa)
+    flash("Tarefa excluída.")
+    return redirect("/")
 
 
 # ---------------------------------------------------------
