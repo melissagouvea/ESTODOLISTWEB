@@ -271,7 +271,12 @@ def adicionar():
 def concluir(idtarefa):
     tarefa = buscar_tarefa(idtarefa)
     if tarefa is None or tarefa["status"] == "Concluída":
-        flash
+        flash("Não há o que concluir nessa tarefa.")
+    elif concluir_tarefa(idtarefa):
+        flash("Tarefa concluída. Bom trabalho!")
+    else:
+        flash("Não foi possível concluír a tarefa.")
+    return redirect("/")
 
 
 # ---------------------------------------------------------
