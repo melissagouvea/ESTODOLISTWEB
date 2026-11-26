@@ -11,7 +11,7 @@ from datetime import date
 from flask import Flask, render_template, request, session, redirect, flash
 
 # Importa funções responsáveis por consultar e inserir tarefas no banco de dados.
-from database import consultar_tarefas, inserir_tarefa
+from database import (consultar_tarefas, inserir_tarefa, buscar_tarefa, concluir_tarefa, apagar_tarefa)
 
 
 # Cria a aplicação Flask.
