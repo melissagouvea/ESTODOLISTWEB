@@ -282,6 +282,10 @@ def concluir(idtarefa):
 def excluir(idtarefa):
     tarefa = buscar_tarefa(idtarefa)
     if tarefa is None:
+        flash("Tarefa não encontrada.")
+        return redirect("/")
+    if request.method == "GET":
+        return render_template
 
 
 # ---------------------------------------------------------
