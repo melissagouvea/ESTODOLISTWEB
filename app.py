@@ -271,6 +271,7 @@ def adicionar():
 def concluir(idtarefa):
     tarefa = buscar_tarefa(idtarefa)
     if tarefa is None or tarefa["status"] == "Concluída":
+        flash
 
 
 # ---------------------------------------------------------
