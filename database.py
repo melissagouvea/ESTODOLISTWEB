@@ -185,4 +185,4 @@ def buscar_tarefa(idtarefa):
         cursor.execute(sql, (idtarefa,))
         return cursor.fetchone() #Um dicionário, ou None se não existir
     except Error as erro:
-        print
+        print(f"")
